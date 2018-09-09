@@ -25,6 +25,6 @@ This project drew inspiration from Udacity online course materials and Tyler McG
 
 
 ## Creaded By
-Bianca Joy Polloso
-biancajoypolloso@gmail.com
-Debugopper
+* Bianca Joy Polloso
+* biancajoypolloso@gmail.com
+* Debugopper
