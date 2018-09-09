@@ -15,13 +15,13 @@ Icons were retrieved from 145841-avatar-set by Freepik.
 
 ## Progress-bar
 Progres Bar implementation was retrieved from 'How To Build A Progress Bar With React' by Dan Zuzevic.  
-* **Link: https://medium.com/@ItsMeDannyZ/how-to-build-a-progress-bar-with-react-8c5e79731d1f
+* Link: https://medium.com/@ItsMeDannyZ/how-to-build-a-progress-bar-with-react-8c5e79731d1f
 
 ## Primary Sources
 This project drew inspiration from Udacity online course materials and Tyler McGinnis' blog.
-* **Link: https://tylermcginnis.com/build-your-own-react-router-v4/
-* **Link: https://tylermcginnis.com/react-router-protected-routes-authentication/
-* **Link: https://tylermcginnis.com/react-router-handling-404-pages/
+* Link: https://tylermcginnis.com/build-your-own-react-router-v4/
+* Link: https://tylermcginnis.com/react-router-protected-routes-authentication/
+* Link: https://tylermcginnis.com/react-router-handling-404-pages/
 
 
 ## Creaded By
