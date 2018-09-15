@@ -1,9 +1,7 @@
 
 import { showLoading, hideLoading } from 'react-redux-loading'
 import { getUsers } from '../utils/api'
-
-export const LOG_IN = 'LOG_IN'
-export const LOG_OUT = 'LOG_OUT'
+import { LOG_IN, LOG_OUT } from '../actions/actionTypes'
 
 export function logIn (id) {
     return {

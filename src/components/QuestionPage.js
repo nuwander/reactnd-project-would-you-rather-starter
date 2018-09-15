@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { Redirect } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import Question from './Question'
-import AnsweredQuestion from './AnsweredQuestion'
+import AnsweredQuestionCard from './AnsweredQuestionCard'
 
 class QuestionPage extends Component {
     render () {
@@ -19,7 +19,7 @@ class QuestionPage extends Component {
                     <Question id={question.id} isAnswer={true}/>
                 )}
                 { isAnswered && (
-                    <AnsweredQuestion id={question.id}/>
+                    <AnsweredQuestionCard id={question.id}/>
                 )}
             </div>
         )

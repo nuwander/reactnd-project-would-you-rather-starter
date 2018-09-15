@@ -3,9 +3,6 @@ import { connect } from 'react-redux'
 import { Redirect, withRouter } from 'react-router-dom'
 import { handleAddQuestion } from '../actions/questions'
 
-const optionOne = 'option1'
-const optionTwo = 'option2'
-
 class NewQuestion extends Component {
   state = {
     optionOneText: '',
@@ -13,18 +10,11 @@ class NewQuestion extends Component {
     toHome: false,
   }
 
-  handleChange = (e, option) => {
-    const text = e.target.value
-
-    if (option === optionOne) {
-      this.setState(() => ({
-        optionOneText: text
-      }))
-    } else {
-      this.setState(() => ({
-        optionTwoText: text
-      }))
-    }    
+  handleChange = event => {
+    const { name, value } = event.target;
+    this.setState({
+      [name]: value,
+    })
   }
 
   handleSubmit = (e) => {
@@ -57,15 +47,17 @@ class NewQuestion extends Component {
           <input
             type='text'
             placeholder='Enter Option One here'
+            name='optionOneText'
             value={optionOneText}
-            onChange={event => this.handleChange(event, optionOne)}
+            onChange={event => this.handleChange(event)}
           />
           <h4>OR</h4>
           <input
             type='text'
             placeholder='Enter Option Two here'
+            name='optionTwoText'
             value={optionTwoText}
-            onChange={event => this.handleChange(event, optionTwo)}
+            onChange={event => this.handleChange(event)}
           />
           <button
             className='btn-submit'

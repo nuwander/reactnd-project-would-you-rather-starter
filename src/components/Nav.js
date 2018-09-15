@@ -9,27 +9,28 @@ class Nav extends Component {
     this.props.dispatch(logOut())
   }
 
+  navLinks() {
+    const links = [
+      ['/', 'Home'],
+      ['/add', 'New Question'],
+      ['/leaderboard', 'Leaderboard']
+    ]
+    return links.map(link => (
+      <li key={link[0]}>
+        <NavLink exact to={link[0]} activeClassName='active'>
+          {link[1]}
+        </NavLink>
+      </li> 
+    ))
+  }
+
   render () {
     const { id, name, avatarURL } = this.props
-
+    
     return (
       <nav className='nav'>
         <ul>
-          <li>
-            <NavLink to='/' exact activeClassName='active'>
-              Home
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to='/add' activeClassName='active'>
-              New Question
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to='/leaderboard' activeClassName='active'>
-              Leaderboard
-            </NavLink>
-          </li>
+          {this.navLinks()}
           <li className='user'>
             { id && (
               <span >

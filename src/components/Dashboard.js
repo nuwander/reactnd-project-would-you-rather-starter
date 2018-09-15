@@ -8,10 +8,12 @@ class Dashboard extends Component {
     }
 
     setTab = (selected) => {
-        this.setState(() => ({
-            selected
-          }))
-    }
+        if(selected !== this.state.selected) {
+            this.setState({
+                selected
+            })
+        }
+    };
 
     render() {
         const { unansweredQuestionIds, answeredQuestionIds } = this.props

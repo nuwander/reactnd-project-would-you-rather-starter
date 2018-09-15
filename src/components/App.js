@@ -19,12 +19,12 @@ class App extends Component {
   }
 
   componentDidMount() {
-    this.props.dispatch(handleInitialData())
-      .then(() => 
-        this.setState(() => ({
+    this.props.getData()
+      .then(() => {
+        this.setState({
           loading: false,
         })
-      ))
+      })
   }
 
   render() {
@@ -36,10 +36,10 @@ class App extends Component {
           <LoadingBar />
           <div className='container'>
             <Nav />
-            {loading === true || false
+            {loading === true
               ? null
               : <Switch>
-                  <Route path='/' exact component={Dashboard} />
+                  <PrivateRoute path='/' exact component={Dashboard} />
                   <PrivateRoute path='/add' exact component={NewQuestion} />
                   <PrivateRoute path='/questions/:id' exact component={QuestionPage} />
                   <PrivateRoute path='/leaderboard' component={Leaderboard} />
@@ -59,4 +59,10 @@ function mapStateToProps ({ authedUser }) {
   }
 }
 
-export default connect(mapStateToProps)(App)
+function mapDispatchToProps(dispatch) {
+  return {
+    getData: () => dispatch(handleInitialData())
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App)

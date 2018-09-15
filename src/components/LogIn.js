@@ -21,9 +21,9 @@ class LogIn extends Component {
     handleSubmit = (e) => {
         e.preventDefault()
         const { id } = this.state
+        const { dispatch } = this.props
 
         if (id !== 'select') {
-            const { dispatch } = this.props
             dispatch(handleLogIn(id))
             .then(() => {
                  this.setState(() => ({

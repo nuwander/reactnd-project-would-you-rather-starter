@@ -27,7 +27,7 @@ class Question extends Component {
     }
 
     render() {
-        const { question, users, isAnswer } = this.props
+        const { question, users, isAnswer } = this.props    
         const {
             id,
             author,
